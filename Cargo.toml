@@ -1,0 +1,17 @@
+[package]
+name = "macy"
+version = "0.1.0"
+edition = "2021"
+description = "macOS Apple Silicon TUI System Monitor"
+
+[dependencies]
+ratatui = "0.29"
+core-foundation = "0.10"
+core-foundation-sys = "0.8"
+libc = "0.2"
+clap = { version = "4", features = ["derive"] }
+
+[profile.release]
+strip = true
+lto = true
+panic = "abort"
